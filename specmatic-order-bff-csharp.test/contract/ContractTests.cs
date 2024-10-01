@@ -80,9 +80,11 @@ public class ContractTests : IAsyncLifetime
             .WithCommand("--examples=examples")
             .WithPortBinding(9000)
             .WithExposedPort(9000)
-            .WithReuse(true)
             .WithBindMount($"{Pwd}/examples/domain_service", $"{TestContainerDirectory}/examples")
             .WithWaitStrategy(Wait.ForUnixContainer().UntilPortIsAvailable(9000))
+            .WithBindMount(
+                $"{Pwd}/dictionary.json",
+                $"{TestContainerDirectory}/dictionary.json")
             .WithBindMount(
                 $"{Pwd}/specmatic.yaml",
                 $"{TestContainerDirectory}/specmatic.yaml").Build();

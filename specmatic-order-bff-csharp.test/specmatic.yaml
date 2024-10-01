@@ -7,6 +7,9 @@ sources:
       - io/specmatic/examples/store/openapi/api_order_v3.yaml
       - io/specmatic/examples/store/asyncapi/kafka.yaml
 
+stub:
+  dictionary: dictionary.json
+
 examples:
  - "./examples/bff"
 
