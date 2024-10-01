@@ -1,0 +1,24 @@
+{
+  "http-request": {
+    "method": "GET",
+    "path": "/products"
+  },
+  "http-response": {
+    "status": 200,
+    "body": [
+      {
+        "id": "(number)",
+        "name": "(string)",
+        "type": "(string)",
+        "inventory": "(number)"
+      },
+      {
+        "id": "(number)",
+        "name": "(string)",
+        "type": "(string)",
+        "inventory": "(number)"
+      }
+    ],
+    "status-text": "OK"
+  }
+}

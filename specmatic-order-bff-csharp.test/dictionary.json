@@ -1,0 +1,8 @@
+{
+  "[0].id": 101,
+  "[1].id": 204,
+  "[*].name": "Product1",
+  "[0].type": "gadget",
+  "[1].type": "book",
+  "[*].inventory": 5
+}
