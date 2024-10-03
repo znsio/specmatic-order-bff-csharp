@@ -56,3 +56,17 @@ jobs:
       with:
         name: html-report
         path: specmatic-order-bff-csharp.test/build/reports/specmatic/html
+
+    - name: Run Specmatic Insights Github Build Reporter
+      uses: znsio/specmatic-insights-build-reporter-github-action@v2.0.2
+      with:
+        github-token: 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
+        specmatic-insights-host: https://insights.specmatic.io
+        specmatic-reports-dir: ./build/reports/specmatic
+        org-id: 66fe6c555e232d36a28fef94
+        branch-ref: ${{ github.ref }}
+        branch-name: ${{ github.ref_name }}
+        build-id: ${{ github.run_id }}
+        repo-name: ${{ github.event.repository.name }}
+        repo-id: ${{ github.repository_id }}
+        repo-url: ${{ github.event.repository.html_url }}
